@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>512</width>
+    <height>408</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>512</width>
+    <height>408</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Duplicate searcher</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="QIcon::ThemeIcon::EditCopy"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="leftMargin">
+     <number>15</number>
+    </property>
+    <property name="topMargin">
+     <number>15</number>
+    </property>
+    <property name="rightMargin">
+     <number>15</number>
+    </property>
+    <property name="bottomMargin">
+     <number>15</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="openFolder">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Open folder</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset theme="folder-open"/>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="dirPath">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>directory path</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::Panel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Sunken</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="update">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Search duplicates</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset theme="QIcon::ThemeIcon::EditFind"/>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="stackedWidgetPage1">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>8</number>
+        </property>
+        <property name="leftMargin">
+         <number>15</number>
+        </property>
+        <property name="topMargin">
+         <number>15</number>
+        </property>
+        <property name="rightMargin">
+         <number>15</number>
+        </property>
+        <property name="bottomMargin">
+         <number>15</number>
+        </property>
+        <item>
+         <widget class="QTreeView" name="treeView"/>
+        </item>
+        <item>
+         <widget class="QTableView" name="tableView"/>
+        </item>
+        <item>
+         <widget class="QWidget" name="verticalWidget" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>90</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>80</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QPushButton" name="deleteAll">
+             <property name="minimumSize">
+              <size>
+               <width>80</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Delete duplicates</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="trash">
+             <property name="minimumSize">
+              <size>
+               <width>80</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Trash</string>
+             </property>
+             <property name="icon">
+              <iconset theme="QIcon::ThemeIcon::EditDelete"/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>512</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::FolderOpen"/>
+   </property>
+   <property name="text">
+    <string>Open folder</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
