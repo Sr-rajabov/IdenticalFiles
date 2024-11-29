@@ -15,26 +15,22 @@ The Duplicate File Finder is a powerful tool designed to help users identify and
 - ## Installation
 
 1. Clone repository:
-
-```bash
+   ```bash
    git clone https://github.com/Sr-rajabov/IdenticalFiles.git
 
 2. Navigate to the project directory:
-
-```bash
+   ```bash
    cd duplicate-file-finder
 
 3. Build the project using CMake (or your preferred build system):
-
-```bash
+   ```bash
    mkdir build
    cd build
    cmake ..
    make
 
 4. Run the application:
-
-```bash
+   ```bash
    ./DuplicateFileFinder
 
 ## Usage
