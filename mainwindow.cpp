@@ -80,7 +80,7 @@ void MainWindow::onSearchFinished(const QStringList &duplicates, const QMap<QStr
     } else {
         int count = 0;
         for (const auto &filePair : fileMap) {
-            if (filePair.size() > 1) {  // Если есть дубликаты
+            if (filePair.size() > 1) {
 
                 int counter = 1;
                 auto it = std::min_element(filePair.begin(), filePair.end(),[](const QString& a, const QString& b) {
